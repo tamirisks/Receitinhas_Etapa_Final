@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 239, 202);
+}
+
+
+.barra_navegação {
+    display: flex;
+    min-height: 50px;
+    gap: 100px;
+    background-color: rgb(255, 239, 202);
+    padding: 30px 80px 30px 30px; 
+    align-items: center;
+    justify-content: center;   
+}
+
+.barra_navegação a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.barra_navegação a:hover {
+    text-decoration: underline;
+}
+
+.separação {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 30px;
+    background-color: rgb(241, 222, 178);   
+}
+
+.imagem-receita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.imagem-receita img {
+    width: 680px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.imagem-receita .dados {
+    background-color: rgb(255, 231, 194);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    font-size: 20px;
+    padding: 20px;
+    width: 400px;
+    min-height: 100px;
+}
+
+.imagem_receita .dados h4, p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.informações {
+    margin-left: 40px;
+}
+
+.informações h2, h3, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

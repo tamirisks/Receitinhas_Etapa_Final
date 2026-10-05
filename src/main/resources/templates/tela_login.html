@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tela de Login</title><link rel="stylesheet" th:href="@{/css/style_tela_login.css}"></head>
+<body>
+<div class="header"><div class="dados">
+<h2>FAÇA SEU LOGIN!</h2>
+<div class="dados-login"><h3>LOGIN:</h3><input type="text" class="campo" name="nome" form="loginForm" placeholder="Digite seu nome"></div>
+<div class="dados-senha"><h3>SENHA:</h3><input type="password" class="campo" name="senha" form="loginForm" placeholder="Digite sua senha"></div>
+<div th:if="${erro}" th:text="${erro}"></div><div th:if="${mensagem}" th:text="${mensagem}"></div>
+<form id="loginForm" method="post" action="/usuarios/login"><div class="botoes"><div class="botao-limpar"><a href="#" id="limpar">LIMPAR</a></div><div class="botao-confirmar"><button type="submit">CONFIRMAR</button></div></div></form>
+<div class="cadastrar"><h4>Não possui login? <a href="/cadastro">CADASTRE-SE</a></h4></div>
+</div></div>
+<script>document.getElementById('limpar').addEventListener('click',function(e){e.preventDefault();document.querySelector('[name=nome]').value='';document.querySelector('[name=senha]').value='';});</script>
+</body></html>

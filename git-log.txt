@@ -1,0 +1,3 @@
+cdcad4d (HEAD -> main) Adiciona testes e documentos da etapa final
+1a72dd0 Integra banco, login e cadastro de receitas
+cd39142 Cria projeto web Receitinhas

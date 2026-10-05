@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Publique</title><link rel="stylesheet" th:href="@{/css/style_tela_publique.css}"></head>
+<body>
+<div class="barra_navegação"><a href="/login">VOLTAR</a><a href="/">Receitinhas</a><a href="/doce">DOCE</a><a href="/salgado">SALGADO</a><a href="/restricoes">RESTRIÇÕES</a><a href="/publique">PUBLIQUE</a></div><div class="separação"></div>
+<div class="dados"><h1>INFORMAÇÕES:</h1><form method="post" action="/receitas/cadastrar"><div class="conteudo"><div class="campos">
+<div class="dados-nome"><h3>Nome da receita:</h3><input type="text" class="campo" name="nome"></div>
+<div class="dados-rendimento"><h3>Rendimento:</h3><input type="text" class="campo" name="rendimento"></div>
+<div class="dados-tempo"><h3>Tempo de preparo:</h3><input type="text" class="campo" name="tempoDePreparo"></div>
+<div class="dados-nível"><h3>Nível de preparo:</h3><input type="text" class="campo" name="nivel"></div>
+<div class="dados-tipo"><h3>Tipo:</h3><select class="campo" name="tipoReceita"><option value="doce">Doce</option><option value="salgado">Salgado</option><option value="restrição">Restrição</option></select></div>
+<div class="dados-ingredientes"><h3>Ingredientes:</h3><textarea class="campo-maior" name="ingredientes"></textarea></div>
+<div class="dados-preparo"><h3>Modo de preparo:</h3><textarea class="campo-maior" name="descricao"></textarea></div>
+<div class="dados-comentário"><h3>Comentário:</h3><textarea class="campo-maior" name="comentario"></textarea></div>
+</div><div class="lado-direito"><div class="foto-receita"><img src="/Imagens/carregar_foto.png" alt="Carregar foto"></div><input type="hidden" name="imagem" value="carregar_foto.png"><div class="botao-cadastrar"><button type="submit">CADASTRAR</button></div></div></div></form><div th:if="${erro}" th:text="${erro}"></div></div>
+</body></html>

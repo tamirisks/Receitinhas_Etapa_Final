@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tela Inicial</title><link rel="stylesheet" th:href="@{/css/style_inicio.css}"></head>
+<body>
+<div class="barra_navegação"><a href="/login">VOLTAR</a><a href="/">Receitinhas</a><a href="/doce">DOCE</a><a href="/salgado">SALGADO</a><a href="/restricoes">RESTRIÇÕES</a><a href="/publique">PUBLIQUE</a></div>
+<div class="separação"></div>
+<div class="imagem_inicial" th:if="${!receitas.isEmpty()}"><img th:src="@{/Imagens/{imagem}(imagem=${receitas[0].imagem})}" alt="Imagem da receita"><div class="texto"><h4 th:text="${receitas[0].nome}"></h4><p th:text="${receitas[0].descricao}"></p><p th:text="${'👤 rendimento: ' + receitas[0].rendimento}"></p><p th:text="${'🕗 preparo: ' + receitas[0].tempoDePreparo}"></p></div></div>
+<div class="título_populares"><h2>RECEITAS POPULARES</h2></div>
+<div class="carrosel"><div class="card" th:each="receita : ${receitas}"><div class="conteúdo_card"><img th:src="@{/Imagens/{imagem}(imagem=${receita.imagem})}" th:alt="${receita.nome}"></div><div class="nome_receita"><h4 th:text="${receita.nome}"></h4></div></div></div>
+<div th:if="${mensagem}" th:text="${mensagem}"></div>
+</body></html>

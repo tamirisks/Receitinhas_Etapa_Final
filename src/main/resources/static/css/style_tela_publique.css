@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 239, 202);
+}
+
+
+.barra_navegação {
+    display: flex;
+    min-height: 50px;
+    gap: 100px;
+    background-color: rgb(255, 239, 202);
+    padding: 30px 80px 30px 30px; 
+    align-items: center;
+    justify-content: center;   
+}
+
+.barra_navegação a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.barra_navegação a:hover {
+    text-decoration: underline;
+}
+
+.separação {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 30px;
+    background-color: rgb(241, 222, 178);   
+}
+
+.dados {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.campos {
+    width: 45%;
+}
+
+.lado-direito {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-receita {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-receita img {
+    width: 90%;
+    max-width: 700px;
+}
+
+.dados .botao-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    width: fit-content;
+    padding: 12px 30px;
+
+    border-radius: 10px;
+
+    margin-top: 40px;
+    margin-left: 67%;
+
+    position: relative;
+    z-index: 2;
+}
+
+.dados .botao-cadastrar a {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.dados .botao-cadastrar a:hover {
+    text-decoration: underline;
+}
+
+.dados .campo {
+    width: 90%;
+    height: 40px;
+    padding: 12px;
+    border-radius: 6px;
+    background: white;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.dados .campo-maior {
+    width: 90%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 6px;
+    background: white;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.dados .campo,
+.dados .campo-maior {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dados h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.dados h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    position: relative;
+    z-index: 2;
+}

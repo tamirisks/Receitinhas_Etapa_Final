@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS receitinha;
+USE receitinha;
+CREATE TABLE IF NOT EXISTS usuario(id BIGINT AUTO_INCREMENT PRIMARY KEY,nome VARCHAR(100) NOT NULL,email VARCHAR(150) NOT NULL,senha VARCHAR(100) NOT NULL,contato VARCHAR(30) NOT NULL);
+CREATE TABLE IF NOT EXISTS receita(id BIGINT AUTO_INCREMENT PRIMARY KEY,nome VARCHAR(150) NOT NULL,ingredientes TEXT NOT NULL,descricao TEXT NOT NULL,rendimento VARCHAR(100) NOT NULL,tempo_de_preparo VARCHAR(100) NOT NULL,tipo_receita VARCHAR(50) NOT NULL,nivel VARCHAR(50) NOT NULL,comentario TEXT NOT NULL,imagem VARCHAR(255));
+INSERT INTO receita(nome,ingredientes,descricao,rendimento,tempo_de_preparo,tipo_receita,nivel,comentario,imagem) SELECT 'Bolo de Cenoura','Cenoura, farinha, ovos e açúcar.','Bata os ingredientes e asse até dourar.','8 pessoas','40 min','doce','fácil','Receita simples.','bolo_de_cenoura.png' WHERE NOT EXISTS(SELECT 1 FROM receita WHERE nome='Bolo de Cenoura');
+INSERT INTO receita(nome,ingredientes,descricao,rendimento,tempo_de_preparo,tipo_receita,nivel,comentario,imagem) SELECT 'Macarrão Alho e Óleo','Macarrão, alho, óleo e sal.','Cozinhe o macarrão e misture com o alho refogado.','4 pessoas','25 min','salgado','fácil','Boa opção para o almoço.','macarrão_alho_e_óleo.png' WHERE NOT EXISTS(SELECT 1 FROM receita WHERE nome='Macarrão Alho e Óleo');
+INSERT INTO receita(nome,ingredientes,descricao,rendimento,tempo_de_preparo,tipo_receita,nivel,comentario,imagem) SELECT 'Panqueca','Farinha, leite, ovos e sal.','Misture os ingredientes e faça as panquecas em uma frigideira.','6 pessoas','30 min','restrição','fácil','Pode receber diferentes recheios.','panqueca.png' WHERE NOT EXISTS(SELECT 1 FROM receita WHERE nome='Panqueca');
+
